@@ -108,8 +108,16 @@ public class main {
         System.out.print("Segundo numero: ");
         double num11 = scan.nextDouble();
 
+    	double suma1 = num10 + num11;
+	    double resta1 = num10 - num11;
+	    double multiplicacion1 = num10 * num11;
+        double divisiom1 = num10 / num11;
+
+        System.out.
+
         // Ejercicio 12
         scan = new Scanner(System.in);
+
 
         // Ejercicio 13
         scan = new Scanner(System.in);
