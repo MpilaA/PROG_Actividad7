@@ -111,17 +111,34 @@ public class main {
     	double suma1 = num10 + num11;
 	    double resta1 = num10 - num11;
 	    double multiplicacion1 = num10 * num11;
-        double divisiom1 = num10 / num11;
+        double division1 = num10 / num11;
 
-        System.out.
+        System.out.println("La suma es " + suma1)
+        System.out.println("La resta es " + resta1)
+        System.out.println("La multiplicacion es " + multiplicacion1)
+        System.out.println("La division es " + division1)
 
         // Ejercicio 12
         scan = new Scanner(System.in);
-
+        System.out.print("Primer numero: ");
+        double num12 = scan.nextDouble();
+        System.out.print("Segundo numero: ");
+        double num13 = scan.nextDouble();
+        
+        System.out.println("El numero mayor es " + Math.max(num12, num13));
 
         // Ejercicio 13
         scan = new Scanner(System.in);
-
+        System.out.print("Numero entero: ")
+        int num14 = scan.nextInt();
+        
+        if (num14 > -1) {
+            System.out.println("El numero es positivo");
+        } if else (num14 < -1) {
+            System.out.println("El numero es negativo")
+        } else {
+            System.out.println("Solo se aceptan numeros enteros.")
+        }
 
     }
 }
