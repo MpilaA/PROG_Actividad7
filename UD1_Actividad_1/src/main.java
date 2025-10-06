@@ -113,10 +113,10 @@ public class main {
 	    double multiplicacion1 = num10 * num11;
         double division1 = num10 / num11;
 
-        System.out.println("La suma es " + suma1)
-        System.out.println("La resta es " + resta1)
-        System.out.println("La multiplicacion es " + multiplicacion1)
-        System.out.println("La division es " + division1)
+        System.out.println("La suma es " + suma1);
+        System.out.println("La resta es " + resta1);
+        System.out.println("La multiplicacion es " + multiplicacion1);
+        System.out.println("La division es " + division1);
 
         // Ejercicio 12
         scan = new Scanner(System.in);
@@ -129,15 +129,15 @@ public class main {
 
         // Ejercicio 13
         scan = new Scanner(System.in);
-        System.out.print("Numero entero: ")
+        System.out.print("Numero entero: ");
         int num14 = scan.nextInt();
         
         if (num14 > -1) {
             System.out.println("El numero es positivo");
-        } if else (num14 < -1) {
-            System.out.println("El numero es negativo")
+        } else if (num14 < -1) {
+            System.out.println("El numero es negativo");
         } else {
-            System.out.println("Solo se aceptan numeros enteros.")
+            System.out.println("Solo se aceptan numeros enteros.");
         }
 
     }
