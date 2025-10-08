@@ -303,5 +303,19 @@ public class main {
         System.out.println("La suma de los primeros 10 numeros naturales es " + suma);
         System.out.println("La multiplicacion de los diez primeros numeros naturales es " + multiplicacion);
 
+        // Ejercicio 14
+        scan = new Scanner(System.in);
+    
+        double horas_trabajadas = 0;
+        double salario = 1;
+        String nombre = "";
+        double salario_neto = 0;
+        double tasas = 0;
+
+        if (horas_trabajadas > 35) {
+            horas_trabajadas = horas_trabajadas - 35
+            salario_neto = salario * 35;
+        }
+
     }
 }
