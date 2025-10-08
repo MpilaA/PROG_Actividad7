@@ -205,7 +205,60 @@ public class main {
         int num119 = scan.nextInt();
         System.out.print("Dame un numero que sea no nulo: ");
         int num1110 = scan.nextInt();
-        
+
+        int positivo = 0;
+        int negativo = 0;
+
+        if (num111 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num112 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num113 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num114 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num115 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num116 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num117 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num118 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num119 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
+        if (num1110 >= 0) {
+            positivo = positivo + 1;
+        } else {
+            negativo = negativo + 1;
+        }
 
     }
 }
