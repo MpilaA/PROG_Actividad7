@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class main {
+    private static double tarifa = 1;
+
     public static void main(String[] args) {
 
         // Ejercicio 1
@@ -307,15 +309,32 @@ public class main {
         scan = new Scanner(System.in);
     
         double horas_trabajadas = 0;
-        double salario = 1;
+        double tarifa = 0;
+        double salario_bruto;
         String nombre = "";
         double salario_neto = 0;
         double tasas = 0;
 
         if (horas_trabajadas > 35) {
-            horas_trabajadas = horas_trabajadas - 35
-            salario_neto = salario * 35;
+            horas_trabajadas = horas_trabajadas - 35;
+            salario_bruto = tarifa * 35;
+            salario_bruto += horas_trabajadas * (tarifa * 1.5);
+        } else {
+            salario_bruto = tarifa * horas_trabajadas;
         }
+        if (salario_bruto > 500) {
+            salario_neto += 500;
+            salario_neto += 400 - (salario_bruto * 0.25);
+        } else if (salario_bruto > 900) {
+            salario_neto += 500;
+            salario_neto += 400 - (salario_bruto * 0.25);
+            salario_neto += (salario_bruto - 900) - (salario_bruto * 0.45);
+        } else {
+            salario_neto = salario_bruto;
+        }
+        
+        System.out.println("Nombre: " + nombre + 
+                           "\n Salario bruto:");
 
     }
 }
