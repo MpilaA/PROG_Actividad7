@@ -270,5 +270,38 @@ public class main {
             negativo = negativo + 1;
         }
 
+        System.out.println("Hay " + positivo + " numeros positivos");
+        System.out.println("Hay " + negativo + " numeros negativos");
+
+        // Ejercicio 12
+        scan = new Scanner(System.in);
+        int num12 = 1;
+        int positivo12 = 0;
+        int negativo12 = 0;
+
+        while (num12 !=0) {
+            System.out.print("Dame un numero que sea no nulo: ");
+            num12 = scan.nextInt();
+            if (num12 >= 0) {
+                positivo12 = positivo12 + 1;
+            } else {
+                negativo12 = negativo12 + 1;
+            }
+        }
+        System.out.println("Ha leido " + positivo12 + " numeros positivos");
+        System.out.println("Ha leido " + negativo12 + " numeros negativos");
+
+        // Ejercicio 13
+        int suma = 0;
+        int multiplicacion = 1;
+
+        for (int i = 1; i < 11; i++){
+            suma = suma + i;
+            multiplicacion = multiplicacion * i;
+        }
+
+        System.out.println("La suma de los primeros 10 numeros naturales es " + suma);
+        System.out.println("La multiplicacion de los diez primeros numeros naturales es " + multiplicacion);
+
     }
 }
