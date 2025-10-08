@@ -78,6 +78,16 @@ public class main {
         }
         // Ejercicio 8
 
+        scan = new Scanner(System.in);
+        System.out.print("Dame un numero: ");
+        int n = scan.nextInt();
+        int result = 1;
+        for (int i = 1;i < (n + 1); i++){
+            result *= i;
+        }
+
+        System.out.println("El resutado es " + result);
+
         /* // Anuar
         * int factorial = 1;
         * for (int i = 1; i <= num2; i++) {
