@@ -70,7 +70,7 @@ public class main {
         if (nota < 3) {
             System.out.println("Muy deficiente");
         } else if (num < 5) {
-            System.out.print("Insuficiente");
+            System.out.println("Insuficiente");
         } else if (num < 6){
             System.out.println("Bien");
         } else if (num < 9) {
@@ -308,12 +308,18 @@ public class main {
         // Ejercicio 14
         scan = new Scanner(System.in);
     
-        double horas_trabajadas = 0;
-        double tarifa = 0;
+        System.out.print("Dame el nombre del trabajador: ");
+        String nombre = scan.next();
+
+        System.out.print("Dame las horas trabjadas: ");
+        double horas_trabajadas = scan.nextDouble();
+
+        System.out.print("Dame la tarifa del trabajador: ");
+        double tarifa = scan.nextDouble();
+
         double salario_bruto;
-        String nombre = "";
         double salario_neto = 0;
-        double tasas = 0;
+        double tasas;
 
         if (horas_trabajadas > 35) {
             horas_trabajadas = horas_trabajadas - 35;
@@ -324,17 +330,23 @@ public class main {
         }
         if (salario_bruto > 500) {
             salario_neto += 500;
-            salario_neto += 400 - (salario_bruto * 0.25);
+            tasas = salario_bruto * 0.25;
+            salario_neto += 400 - tasas;
         } else if (salario_bruto > 900) {
             salario_neto += 500;
-            salario_neto += 400 - (salario_bruto * 0.25);
+            tasas = salario_bruto * 0.25;
+            salario_neto += 400 - tasas;
+            tasas += salario_bruto * 0.45;
             salario_neto += (salario_bruto - 900) - (salario_bruto * 0.45);
         } else {
             salario_neto = salario_bruto;
+            tasas = 0;
         }
         
         System.out.println("Nombre: " + nombre + 
-                           "\n Salario bruto:");
+                           "\nSalario bruto: " + salario_bruto +
+                           "\nTasa: " + tasas + 
+                           "\nSalario neto: " + salario_neto);
 
     }
 }
