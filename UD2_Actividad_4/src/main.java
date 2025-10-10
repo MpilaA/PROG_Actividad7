@@ -34,8 +34,23 @@ public class main {
         double [] nums3 = new double[10];
 
         for (int i = 0; i < nums3.length; i++) {
-            
+            System.out.print("Dame un numero: ");
+            nums3[i] = scan.nextDouble();
         }
 
+        double mayor = 0;
+        double menor = 0;
+
+        for (int i = 0; i < nums3.length; i++) {
+            if (i == 0) {
+                mayor = nums3[i];
+                menor = nums3[i];
+                continue;
+            }
+            mayor = Math.max(mayor, nums3[i]);
+            menor = Math.min(menor, nums3[i]);
+        }
+        System.out.println("El mayor es " + mayor + "\n" +
+        "El menor es " + menor);
     }
 }
