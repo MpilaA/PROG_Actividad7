@@ -122,7 +122,7 @@ public class main {
         System.out.println("La hora mas un segundo es: " + horas + ":" + minutos + ":" + segundos);
 
         // Ejercicio 10
-        scan = new Scanner(System.in);
+        /*scan = new Scanner(System.in);
         System.out.print("Dame un numero que sea no nulo: ");
         int num101 = scan.nextInt();
         System.out.print("Dame un numero que sea no nulo: ");
@@ -144,11 +144,9 @@ public class main {
         System.out.print("Dame un numero que sea no nulo: ");
         int num1010 = scan.nextInt();
 
-        if (num101 >= 0) {
-            System.out.println("El numero " + num101 + " es positvo");
-        } else {
-            System.out.println("El numero " + num101 + "es negativo");
-        }
+        scan = new Scanner(System.in);
+        System.out.print("Dame un numero que sea no nulo: ");
+        int num101 = scan.nextInt();
         if (num102 >= 0) {
             System.out.println("El numero " + num102 + " es positvo");
         } else {
@@ -193,10 +191,21 @@ public class main {
             System.out.println("El numero " + num1010 + " es positvo");
         } else {
             System.out.println("El numero " + num1010 + "es negativo");
+        }*/
+        scan = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Dame un numero que sea no nulo: ");
+            int num10 = scan.nextInt();
+
+            if (num10 >= 0) {
+                System.out.println("El numero " + num10 + " es positvo");
+            } else {
+                System.out.println("El numero " + num10 + " es negativo");
+            }
         }
 
         // Ejercicio 11
-        scan = new Scanner(System.in);
+        /*scan = new Scanner(System.in);
         System.out.print("Dame un numero que sea no nulo: ");
         int num111 = scan.nextInt();
         System.out.print("Dame un numero que sea no nulo: ");
@@ -273,6 +282,23 @@ public class main {
         }
 
         System.out.println("Hay " + positivo + " numeros positivos");
+        System.out.println("Hay " + negativo + " numeros negativos");*/
+        scan = new Scanner(System.in);
+
+        int positivo = 0;
+        int negativo = 0;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Dame un numero que sea no nulo: ");
+            int num11 = scan.nextInt();
+            if (num11 >= 0) {
+                positivo = positivo + 1;
+            } else {
+                negativo = negativo + 1;
+            }
+        }
+
+        System.out.println("Hay " + positivo + " numeros positivos");
         System.out.println("Hay " + negativo + " numeros negativos");
 
         // Ejercicio 12
@@ -328,16 +354,16 @@ public class main {
         } else {
             salario_bruto = tarifa * horas_trabajadas;
         }
-        if (salario_bruto > 500) {
-            salario_neto += 500;
-            tasas = salario_bruto * 0.25;
-            salario_neto += 400 - tasas;
-        } else if (salario_bruto > 900) {
+        if (salario_bruto > 900) {
             salario_neto += 500;
             tasas = salario_bruto * 0.25;
             salario_neto += 400 - tasas;
             tasas += salario_bruto * 0.45;
             salario_neto += (salario_bruto - 900) - (salario_bruto * 0.45);
+        } else if (salario_bruto > 500) {
+            salario_neto += 500;
+            tasas = salario_bruto * 0.25;
+            salario_neto += (400 - tasas);
         } else {
             salario_neto = salario_bruto;
             tasas = 0;
