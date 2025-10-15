@@ -27,7 +27,8 @@ public class main {
         for (int i = 0; i < nums2.length; i++) {
             suma2 += nums2[i];
         }
-        System.out.println("La suma de todos los numeros introducidos es " + suma2);
+        System.out.println("La suma de todos los numeros introducidos es " + 
+        suma2);
 
         // Ejercicio 3
         scan = new Scanner(System.in);
@@ -50,17 +51,18 @@ public class main {
             mayor = Math.max(mayor, nums3[i]);
             menor = Math.min(menor, nums3[i]);
         }
-        System.out.println("El mayor es " + mayor + "\n" + "El menor es " + menor);
+        System.out.println("El mayor es " + mayor + "\n" + 
+        "El menor es " + menor);
 
         // Ejercicio 4
         scan = new Scanner(System.in);
-        double [] nums4 = new double[20];
+        int [] nums4 = new int[20];
 
-        double negativos = 0;
-        double positivos = 0;
+        int negativos = 0;
+        int positivos = 0;
 
         for (int i = 0; i < nums4.length; i++) {
-            nums4[i] = scan.nextDouble();
+            nums4[i] = scan.nextInt();
         }
         for (int i = 0; i < nums4.length; i++) {
             if (nums4[i] < 0) {
@@ -70,8 +72,28 @@ public class main {
             } else {
                 System.out.println("¿Que es eso?");
             }
-            System.out.println();
-            System.out.println();
+            System.out.println("La suma de los numeros positivos es iguala a " + 
+            positivos);
+            System.out.println("La suma de los numeros negativos es igual a " + 
+            negativos);
         }
+
+        // Ejercicio 5
+        scan = new Scanner(System.in);
+        double [] nums5 = new double[20];
+
+        for (int i = 0; i < nums5.length; i++) {
+            System.out.print("Dame un numero: ");
+            nums5[i] = scan.nextDouble();
+        }
+
+        double suma5 = 0;
+        for (int i = 0; i < nums5.length; i++) {
+            suma5 = suma5 + nums5[i];
+
+        }
+
+        double media = suma5 / nums5.length;
+        System.out.println("La media de los numeros dados es " + media);
     }
 }
