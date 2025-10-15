@@ -27,8 +27,8 @@ public class main {
         for (int i = 0; i < nums2.length; i++) {
             suma2 += nums2[i];
         }
-        System.out.println("La suma de todos los numeros introducidos es " + 
-        suma2);
+        System.out.println("La suma de todos los numeros " + 
+        "introducidos es " + suma2);
 
         // Ejercicio 3
         scan = new Scanner(System.in);
@@ -95,5 +95,71 @@ public class main {
 
         double media = suma5 / nums5.length;
         System.out.println("La media de los numeros dados es " + media);
+
+        // Ejercicio 6
+        scan = new Scanner(System.in);
+
+        System.out.print("Dame un numero entero: ");
+        int n6 = scan.nextInt();
+        System.out.print("Dame otro numero entero: ");
+        int m6 = scan.nextInt();
+
+        int [] array6 = new int[n6];
+        
+        for (int i = 0; i < array6.length; i++) {
+            array6[i] = m6;
+        }
+        // Impresion del array6
+        System.out.println("Valores del array: ");
+        for (int i = 0; i < array6.length; i++) {
+            System.out.print(array6[i] + " ");
+        }
+        System.out.println();
+
+        // Ejercicio 7
+        scan = new Scanner(System.in);
+
+        System.out.print("");
+        int p7 = scan.nextInt();
+        System.out.print("");
+        int q7 = scan.nextInt();
+
+        int [] array7 = new int[Math.abs(p7-q7)];
+
+        if (p7 > q7) {
+            for (int i = 0; i < array7.length; i++) {
+                array7[i] = p7 + i;
+            }
+        } else if (p7 < q7) {
+            for (int i = 0; i < array7.length; i++) {
+                array7[i] = p7 - i;
+            }
+        } else {
+            System.out.println("¿Que fue eso?");
+        } 
+        // Impresion del array
+        System.out.println("Valores del array: ");
+        for (int i = 0; i < array7.length; i++) {
+            System.out.print(array7 + " ");
+        }
+        System.out.println();
+
+        // Ejercicio 8
+        scan = new Scanner(System.in);
+
+        double [] array8 = new double[100]; 
+
+        for (int i = 0; i < array8.length; i++) {
+            array8[i] = Math.random();
+        }
+
+        double r8 = nextDouble();
+
+        for (int i = 0; i < array8.length; i++) {
+            if (i >= r8) {
+                System.out.println(array8[i]);
+            }
+        }
+
     }
 }
