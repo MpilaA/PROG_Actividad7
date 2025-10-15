@@ -50,7 +50,28 @@ public class main {
             mayor = Math.max(mayor, nums3[i]);
             menor = Math.min(menor, nums3[i]);
         }
-        System.out.println("El mayor es " + mayor + "\n" +
-        "El menor es " + menor);
+        System.out.println("El mayor es " + mayor + "\n" + "El menor es " + menor);
+
+        // Ejercicio 4
+        scan = new Scanner(System.in);
+        double [] nums4 = new double[20];
+
+        double negativos = 0;
+        double positivos = 0;
+
+        for (int i = 0; i < nums4.length; i++) {
+            nums4[i] = scan.nextDouble();
+        }
+        for (int i = 0; i < nums4.length; i++) {
+            if (nums4[i] < 0) {
+                negativos = negativos + nums4[i];
+            } else if (nums4[i] >= 0) {
+                positivos += nums4[i];
+            } else {
+                System.out.println("¿Que es eso?");
+            }
+            System.out.println();
+            System.out.println();
+        }
     }
 }
