@@ -1,11 +1,13 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args){
 
+
         // Ejercicio 1
         Scanner scan = new Scanner(System.in);
-        double [] nums1 = new double[10];
+      double [] nums1 = new double[10];
 
         for (int i = 0; i < nums1.length; i++) {
             System.out.print("Dame un numero: ");
@@ -62,6 +64,7 @@ public class main {
         int positivos = 0;
 
         for (int i = 0; i < nums4.length; i++) {
+            System.out.print("Dame un numero: ");
             nums4[i] = scan.nextInt();
         }
         for (int i = 0; i < nums4.length; i++) {
@@ -72,15 +75,15 @@ public class main {
             } else {
                 System.out.println("¿Que es eso?");
             }
-            System.out.println("La suma de los numeros positivos es iguala a " + 
-            positivos);
-            System.out.println("La suma de los numeros negativos es igual a " + 
-            negativos);
         }
+        System.out.println("La suma de los numeros positivos es iguala a " +
+                positivos);
+        System.out.println("La suma de los numeros negativos es igual a " +
+                negativos);
 
         // Ejercicio 5
         scan = new Scanner(System.in);
-        double [] nums5 = new double[20];
+        double[] nums5 = new double[20];
 
         for (int i = 0; i < nums5.length; i++) {
             System.out.print("Dame un numero: ");
@@ -119,28 +122,28 @@ public class main {
         // Ejercicio 7
         scan = new Scanner(System.in);
 
-        System.out.print("");
+        System.out.print("Dame un numero para p: ");
         int p7 = scan.nextInt();
-        System.out.print("");
+        System.out.print("Dame un numero para q: ");
         int q7 = scan.nextInt();
 
-        int [] array7 = new int[Math.abs(p7-q7)];
+        int[] array7 = new int[Math.abs(p7 - q7)];
 
-        if (p7 > q7) {
+        if (p7 < q7) {
             for (int i = 0; i < array7.length; i++) {
                 array7[i] = p7 + i;
             }
-        } else if (p7 < q7) {
+        } else if (p7 > q7) {
             for (int i = 0; i < array7.length; i++) {
                 array7[i] = p7 - i;
             }
         } else {
             System.out.println("¿Que fue eso?");
-        } 
+        }
         // Impresion del array
         System.out.println("Valores del array: ");
         for (int i = 0; i < array7.length; i++) {
-            System.out.print(array7 + " ");
+            System.out.print(array7[i] + " ");
         }
         System.out.println();
 
@@ -153,13 +156,32 @@ public class main {
             array8[i] = Math.random();
         }
 
-        double r8 = nextDouble();
+        System.out.print("Dame un numero decimal entre 0 y 1: ");
+        double r8 = scan.nextDouble();
 
         for (int i = 0; i < array8.length; i++) {
-            if (i >= r8) {
+            if (array8[i] >= r8) {
                 System.out.println(array8[i]);
             }
         }
 
+        // Ejercicio 9
+        scan = new Scanner(System.in);
+
+        int [] array9 = new int[100];
+
+        for (int i = 0; i < array9.length; i++) {
+            array8[i] = 1 + (Math.random() * 10);
+        }
+
+        System.out.print("");
+        int n9 = scan.nextInt();
+        int i_array9 = Arrays.binarySearch(array9, n9);
+        /*for (int i = 0 ; i < array9.length; i++) {
+            if (array9[i] == n9) {
+                System.out.println("El numero esta en esta posicion del array" + i);
+                break;
+            }*/
+        }
     }
 }
