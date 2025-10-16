@@ -153,13 +153,77 @@ public class main {
             array8[i] = Math.random();
         }
 
-        double r8 = nextDouble();
+        double r8 = scan.nextDouble();
 
         for (int i = 0; i < array8.length; i++) {
             if (i >= r8) {
                 System.out.println(array8[i]);
             }
         }
+        // Ejercicio 9
+        // Ejercicio 10
+        // Ejercicio 11
+        // Ejercicio 12
+        scan = new Scanner(System.in);
+
+        int [] array12 = new int[10];
+        
+        String opcion12 = "d";
+        while (opcion12 == "c") {
+            System.out.print("a. Mostrar valores. \nb. Introducir valor. " + 
+            "\nc.Salir. \n Pon una opcion de las anteriores: ");
+            opcion12 = scan.next();
+            switch (opcion12) {
+                case "a":
+                    System.out.println("Valores del array: ");
+                    for (int i = 0; i < array12.length; i++){
+                        System.out.print(array12[i] + " ");
+                    }
+                    break;
+                case "b":
+                    
+                    break;
+                case "c":
+                    System.out.println("Saliendo...");
+                    break;
+            }
+        }
+
+        // Ejercicio 13
+        scan = new Scanner(System.in);
+        System.out.print("Dame un numero: ");
+        int v13 = scan.nextInt();
+        System.out.print("Dame un numero: ");
+        int i13 = scan.nextInt();
+        System.out.print("Dame un numero: ");
+        int n13 = scan.nextInt();
+
+        int [] array13 = new int[n13];
+
+        for (int i = 0; i < array13.length; i++) {
+            array13[i] = v13 + (i13 * i);
+        }
+
+        System.out.println("Valores del array: ");
+        for (int i = 0; i < array13.length; i++) {
+            System.out.print(array13[i] + " ");
+        }
+
+        // Ejercicio 14
+        int [] array14 = new int[1+2+3+4+5+6+7+8+9+10];
+
+        for (int i = 0, index = 0; i < 10; i++) {
+            for (int j = 0; j < i; j++) {
+                array14[index]= i;
+                index += 1;
+            }
+        }
+
+        System.out.println("Valores del array: ");
+        for (int i = 0; i < array14.length; i++){
+            System.out.print(array14[i] + " ");
+        }
+        System.out.println();
 
     }
 }
