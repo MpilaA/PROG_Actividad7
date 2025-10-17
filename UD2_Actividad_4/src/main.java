@@ -174,9 +174,10 @@ public class main {
             array8[i] = 1 + (Math.random() * 10);
         }
 
-        System.out.print("");
+        System.out.print("Dame un numero: ");
         int n9 = scan.nextInt();
-        int i_array9 = Arrays.binarySearch(array9, n9);
+        System.out.println("El numero esta en esta posicion del array" + 
+        (Arrays.binarySearch(array9, n9)));
         /*for (int i = 0 ; i < array9.length; i++) {
             if (array9[i] == n9) {
                 System.out.println("El numero esta en esta posicion del array" + i);
@@ -185,13 +186,43 @@ public class main {
         }*/
 
         // Ejercicio 10
-        double [] arrayn10 = new double[5];
-        for (int i = 0; i < arrayn10.length; i++) {
+        double [] array10 = new double[5];
+        for (int i = 0; i < array10.length; i++) {
             System.out.print("Dame las alturas: ");
-            arrayn10[i] = scan.nextInt();
+            array10[i] = scan.nextInt();
         }
         
+        double media10 = 0;
+        double minimo = 0;
+        double maximo = 0;
+        for (int i = 0; i < array10.length; i++) {
+            media10 += array10[i];
+            if (i == 0){
+                minimo = array10[i];
+                maximo = array10[i];
+            } else {
+                minimo = Math.min(array10[i], minimo);
+                maximo = Math.max(array10[i], maximo);
+            }
+        }
+        media10 = media10 / array10.length;
+        int encima10 = 0;
+        int debajo10 = 0;
+        for (int i = 0; i < array10.length; i++) {
+            if (array10[i] < media10) {
+                debajo10++;
+            } else if (array10[i] > media10){
+                encima10++;
+            }
+        }
+        System.out.println("La media de las alturas es " + media10 + 
+        "\nLa altura maxima es " + maximo + "\nLa altura minima " + minimo + 
+        "\nLas personas por encima de la media son " + encima10 + 
+        "\nLas personas por debajo de la media son " + debajo10);
+
         // Ejercicio 11
+        int [] array11_1 = new int[100];
+        int [] array11_2 = new int[100];
 
         // Ejercicio 12
         scan = new Scanner(System.in);
