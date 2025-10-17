@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 
         // Ejercicio 1
         Scanner scan = new Scanner(System.in);
-      double [] nums1 = new double[10];
+        double[] nums1 = new double[10];
 
         for (int i = 0; i < nums1.length; i++) {
             System.out.print("Dame un numero: ");
@@ -18,8 +18,8 @@ public class main {
         }
         // Ejercicio 2 
         scan = new Scanner(System.in);
-        double [] nums2 = new double[10];
-        
+        double[] nums2 = new double[10];
+
         for (int i = 0; i < nums2.length; i++) {
             System.out.print("Dame un numero: ");
             nums2[i] = scan.nextDouble();
@@ -29,12 +29,12 @@ public class main {
         for (int i = 0; i < nums2.length; i++) {
             suma2 += nums2[i];
         }
-        System.out.println("La suma de todos los numeros " + 
-        "introducidos es " + suma2);
+        System.out.println("La suma de todos los numeros " +
+                "introducidos es " + suma2);
 
         // Ejercicio 3
         scan = new Scanner(System.in);
-        double [] nums3 = new double[10];
+        double[] nums3 = new double[10];
 
         for (int i = 0; i < nums3.length; i++) {
             System.out.print("Dame un numero: ");
@@ -53,12 +53,12 @@ public class main {
             mayor = Math.max(mayor, nums3[i]);
             menor = Math.min(menor, nums3[i]);
         }
-        System.out.println("El mayor es " + mayor + "\n" + 
-        "El menor es " + menor);
+        System.out.println("El mayor es " + mayor + "\n" +
+                "El menor es " + menor);
 
         // Ejercicio 4
         scan = new Scanner(System.in);
-        int [] nums4 = new int[20];
+        int[] nums4 = new int[20];
 
         int negativos = 0;
         int positivos = 0;
@@ -107,8 +107,8 @@ public class main {
         System.out.print("Dame otro numero entero: ");
         int m6 = scan.nextInt();
 
-        int [] array6 = new int[n6];
-        
+        int[] array6 = new int[n6];
+
         for (int i = 0; i < array6.length; i++) {
             array6[i] = m6;
         }
@@ -150,16 +150,14 @@ public class main {
         // Ejercicio 8
         scan = new Scanner(System.in);
 
-        double [] array8 = new double[100]; 
+        double[] array8 = new double[100];
 
         for (int i = 0; i < array8.length; i++) {
             array8[i] = Math.random();
         }
 
-<<<<<<< HEAD
         System.out.print("Dame un numero decimal entre 0 y 1: ");
-=======
->>>>>>> 00f20a6cc87cf3789516b33e83c766a7364773c5
+
         double r8 = scan.nextDouble();
 
         for (int i = 0; i < array8.length; i++) {
@@ -168,15 +166,40 @@ public class main {
             }
         }
         // Ejercicio 9
+        scan = new Scanner(System.in);
+
+        int[] array9 = new int[100];
+
+        for (int i = 0; i < array9.length; i++) {
+            array8[i] = 1 + (Math.random() * 10);
+        }
+
+        System.out.print("");
+        int n9 = scan.nextInt();
+        int i_array9 = Arrays.binarySearch(array9, n9);
+        /*for (int i = 0 ; i < array9.length; i++) {
+            if (array9[i] == n9) {
+                System.out.println("El numero esta en esta posicion del array" + i);
+                break;
+            }
+        }*/
+
         // Ejercicio 10
+        double [] arrayn10 = new double[5];
+        for (int i = 0; i < arrayn10.length; i++) {
+            System.out.print("Dame las alturas: ");
+            arrayn10[i] = scan.nextInt();
+        }
+        
         // Ejercicio 11
+
         // Ejercicio 12
         scan = new Scanner(System.in);
 
         int [] array12 = new int[10];
         
         String opcion12 = "d";
-        while (opcion12 == "c") {
+        while (!opcion12.equals("c")) {
             System.out.print("a. Mostrar valores. \nb. Introducir valor. " + 
             "\nc.Salir. \n Pon una opcion de las anteriores: ");
             opcion12 = scan.next();
@@ -232,23 +255,5 @@ public class main {
         }
         System.out.println();
 
-        // Ejercicio 9
-        scan = new Scanner(System.in);
-
-        int [] array9 = new int[100];
-
-        for (int i = 0; i < array9.length; i++) {
-            array8[i] = 1 + (Math.random() * 10);
-        }
-
-        System.out.print("");
-        int n9 = scan.nextInt();
-        int i_array9 = Arrays.binarySearch(array9, n9);
-        /*for (int i = 0 ; i < array9.length; i++) {
-            if (array9[i] == n9) {
-                System.out.println("El numero esta en esta posicion del array" + i);
-                break;
-            }*/
-        }
     }
 }
