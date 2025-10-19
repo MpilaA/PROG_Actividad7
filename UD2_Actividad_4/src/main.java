@@ -224,6 +224,20 @@ public class main {
         int [] array11_1 = new int[100];
         int [] array11_2 = new int[100];
 
+        for (int i = 0; i < array11_1.length; i++) {
+            array11_1[i] = i + 1;
+        }
+        for (int i = 0; i < array11_1.length; i++) {
+            array11_2[(array11_2.length - 1)-i] = array11_1[i];
+        }
+
+        for (int i = 0; i < array11_1.length; i++){
+            System.out.print(array11_1[i] + " ");
+        }
+        for (int i = 0; i < array11_2.length; i++){
+            System.out.print(array11_2[i] + " ");
+        }
+
         // Ejercicio 12
         scan = new Scanner(System.in);
 
@@ -242,7 +256,11 @@ public class main {
                     }
                     break;
                 case "b":
-                    
+                    System.out.print("Dame un valor: ");
+                    int v = scan.nextInt();
+                    System.out.print("Dame una posicion: ");
+                    int p = scan.nextInt();
+                    array10[p] = v;
                     break;
                 case "c":
                     System.out.println("Saliendo...");
