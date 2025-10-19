@@ -239,12 +239,12 @@ public class main {
         }
 
         // Ejercicio 12
-        scan = new Scanner(System.in);
-
         int [] array12 = new int[10];
         
         String opcion12 = "d";
         while (!opcion12.equals("c")) {
+            scan = new Scanner(System.in);
+            
             System.out.print("a. Mostrar valores. \nb. Introducir valor. " + 
             "\nc.Salir. \n Pon una opcion de las anteriores: ");
             opcion12 = scan.next();
