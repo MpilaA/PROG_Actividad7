@@ -171,7 +171,7 @@ public class main {
         int[] array9 = new int[100];
 
         for (int i = 0; i < array9.length; i++) {
-            array8[i] = 1 + (Math.random() * 10);
+            array9[i] = (int) (1 + (Math.random() * 10));
         }
 
         System.out.print("Dame un numero: ");
