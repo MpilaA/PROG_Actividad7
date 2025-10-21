@@ -72,5 +72,17 @@ public class main {
         System.out.print("Dame una frase: ");
         String frase5 = scan.nextLine();
 
+        frase5 = frase5.replace(" ","");
+        String frase_inversa = "";
+        for (int i = frase5.length(); i > 0 ; i--) {
+            frase_inversa += frase5.charAt(i);
+        }
+
+        if (frase5.equalsIgnoreCase(frase5)) {
+            System.out.println("La frase intorducida es un palindromo");
+        } else {
+            System.out.println("La frase intorducida no es un palindromo");
+        }
+
     }
 }
