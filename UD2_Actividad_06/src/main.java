@@ -26,9 +26,20 @@ public class main {
             }
         }
         for (int i = 0; i < matriz2.length; i++) {
+            System.out.print(i + ": ");
             for (int j = 0; j < matriz2[i].length; j++) {
-                S
+                System.out.println(j + " ");
             }
+            System.out.println();
+        }
+
+        // Ejercicio 3
+        int n = 0;
+        int m = 0;
+
+        int [][] matriz3 = new int[n][m];
+        for (int i = 0; i < ; i++) {
+            
         }
 
     }
