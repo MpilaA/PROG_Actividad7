@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] Args) {
         // Ejercicio 1
@@ -34,13 +37,60 @@ public class main {
         }
 
         // Ejercicio 3
-        int n = 0;
-        int m = 0;
+        Scanner scan = new Scanner(System.in);
+        // Pidiendo valores para la creacion de la matriz.
+        System.out.print("Dame el valor para n: ");
+        int n = scan.nextInt() ;
+        System.out.print("Dame el valor para m: ");
+        int m = scan.nextInt();
 
-        int [][] matriz3 = new int[n][m];
-        for (int i = 0; i < ; i++) {
-            
+        // Creancion de la matriz con los parametroas anteriores
+        double [][] matriz3 = new double[n][m];
+        // Preguntando los numeros que lo van a componer
+        for (int i = 0; i < matriz3.length; i++) {
+            for (int j = 0; i < matriz3[i].length; i++) {
+                matriz3[i][j] = scan.nextDouble();
+            }
         }
+        // Contando los mayores y menosres que cero y los que sean cero
+        int ceros = 0, maycero = 0, mencero = 0;
+        for (int i = 0; i < matriz3.length; i++) {
+            for (int j = 0; j < matriz3[i].length; j++) {
+                if (matriz3[i][j] == 0) {
+                    ceros++;
+                } else if (matriz3[i][j] > 0) {
+                    maycero++;
+                } else if (matriz3[i][j] < 0) {
+                    mencero++;
+                }
+            }
+        }
+        // Impresion de los resultados del bucle anterior
+        System.out.println("Los mayores que cero son " + maycero);
+        System.out.println("Los mayores que cero son" + mencero);
+        System.out.println("Hay" + ceros + "ceros");
+
+        // Ejercicio 4
+        scan = new Scanner(System.in);
+        double [][] matriz4 = new double[4][5];
+
+        for (int i = 0; i < matriz4.length; i++) {
+            System.out.println("Notas del Alumno " + (i+1));
+            for (int j = 0; j < matriz4.length; j++) {
+                System.out.println("Dame la nota " + j + " del alumno");
+                matriz4[i][j] = scan.nextDouble();
+            }
+        }
+
+
+        for (int i = 0; i < matriz4.length; i++) {
+            double min = Double.MAX_VALUE, max = Double.MAX_VALUE, media = 0;
+            for (int j = 0; j < matriz4.length; j++) {
+                min = 0;
+            }
+        }
+
+        System.out.println("");
 
     }
 }
