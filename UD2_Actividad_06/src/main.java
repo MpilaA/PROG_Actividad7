@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
@@ -86,11 +85,21 @@ public class main {
         for (int i = 0; i < matriz4.length; i++) {
             double min = Double.MAX_VALUE, max = Double.MAX_VALUE, media = 0;
             for (int j = 0; j < matriz4.length; j++) {
-                min = 0;
+                min = Math.min(min, matriz4[i][j]);
+                max = Math.max(max, j);
+                media += matriz4[i][j];
             }
+            media = media / matriz4[i].length;
+            System.out.println("Estadisticas de la notas del Alumno " + (i+1) + 
+            ": \n\t" + "La nota minima: " + min + "\n\tLa nota maxima: " + max + 
+            "\n\tLa nota media: " + media);
         }
 
-        System.out.println("");
+        // Ejercicio 5
+        scan = new Scanner(System.in)
+        System.out.print("");
+        int n5 = scan.nextInt();
+        double [][] matriz5 = new double[2][n5];
 
     }
 }
