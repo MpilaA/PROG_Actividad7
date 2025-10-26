@@ -30,7 +30,7 @@ public class main {
         for (int i = 0; i < matriz2.length; i++) {
             System.out.print(i + ": ");
             for (int j = 0; j < matriz2[i].length; j++) {
-                System.out.println(j + " ");
+                System.out.print(matriz2[i][j] + " ");
             }
             System.out.println();
         }
@@ -47,7 +47,8 @@ public class main {
         double [][] matriz3 = new double[n][m];
         // Preguntando los numeros que lo van a componer
         for (int i = 0; i < matriz3.length; i++) {
-            for (int j = 0; i < matriz3[i].length; i++) {
+            for (int j = 0; j < matriz3[i].length; j++) {
+                System.out.print("Dame un valor: ");
                 matriz3[i][j] = scan.nextDouble();
             }
         }
@@ -66,7 +67,7 @@ public class main {
         }
         // Impresion de los resultados del bucle anterior
         System.out.println("Los mayores que cero son " + maycero);
-        System.out.println("Los mayores que cero son" + mencero);
+        System.out.println("Los mayores que cero son " + mencero);
         System.out.println("Hay" + ceros + "ceros");
 
         // Ejercicio 4
@@ -76,14 +77,14 @@ public class main {
         for (int i = 0; i < matriz4.length; i++) {
             System.out.println("Notas del Alumno " + (i+1));
             for (int j = 0; j < matriz4.length; j++) {
-                System.out.println("Dame la nota " + j + " del alumno");
+                System.out.println("Dame la nota " + j + " del alumno: ");
                 matriz4[i][j] = scan.nextDouble();
             }
         }
 
 
         for (int i = 0; i < matriz4.length; i++) {
-            double min = Double.MAX_VALUE, max = Double.MAX_VALUE, media = 0;
+            double min = Double.MAX_VALUE, max = Double.MIN_VALUE, media = 0;
             for (int j = 0; j < matriz4.length; j++) {
                 min = Math.min(min, matriz4[i][j]);
                 max = Math.max(max, j);
@@ -96,10 +97,31 @@ public class main {
         }
 
         // Ejercicio 5
-        scan = new Scanner(System.in)
-        System.out.print("");
-        int n5 = scan.nextInt();
+        scan = new Scanner(System.in);
+        // Creacion de la matriz
+        System.out.print("Dime el numero de empleados: ");
+        int n5 = (scan.nextInt()+1);
         double [][] matriz5 = new double[2][n5];
+
+        for (int i = 0; i < (n5 - 1); i++) {
+            System.out.print("Dime el su genero (0 es varon, 1 es mujer): ");
+            int genero = scan.nextInt();
+            System.out.print("Dime el sueldo: ");
+            matriz5[genero][i] = scan.nextDouble();
+        }
+        double media [] = new double[2];
+        for (int i = 0; i < matriz5.length; i++) {
+            int contador = 0;
+            for (int j = 0; j < matriz5[i].length; j++) {
+                if (matriz5[i][j] != 0) {
+                    media[i] += matriz5[i][j];
+                    contador++;
+                }
+            }
+            media[i] = media[i] / contador;
+        }
+        System.out.println("La media de los varones es " + media[0] + "\n" + 
+        "La media de las mujeres es " + media[1]);
 
     }
 }
