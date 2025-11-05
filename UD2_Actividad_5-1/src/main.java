@@ -32,6 +32,7 @@ public class main {
         System.out.print("Dame tu segundo apellido: ");
         String apellido2 = scan.next();
 
+        // Anuar: Agregar .toUpperCase y cmabiar 2 por 3
         String usuario = nombre.substring(0,2) + apellido1.substring(0,2) + 
         apellido2.substring(0,2);
         
@@ -43,7 +44,7 @@ public class main {
         String frase4 = scan.nextLine();
 
         int contara = 0, contare = 0, contari = 0, contaro = 0, contaru = 0;
-
+        // Se me olvido que contara mayusculas
         for (int i = 0; i < frase4.length() ; i++) {
             switch (frase4.charAt(i)) {
                 case 'a':

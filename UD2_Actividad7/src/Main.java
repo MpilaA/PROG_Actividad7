@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
         Scanner scan; // Creando variable para scanner
         System.out.println("¡Bienvenido al clasico piedra papel o tijera! \n" + 
@@ -22,27 +22,30 @@ public class App {
             String com = jugadas[(int)(Math.random()*jugadas.length-2)];
 
             do {
-                /* Incializando variable scan con Scanner. 
-                Antes de pedir informacion al usuario */
                 scan = new Scanner(System.in);
-                System.out.print("Dame tu jugada: ");
+                System.out.print("Damela accion que has elegido: ");
                 player = scan.next();
             } while (Arrays.binarySearch(jugadas, player)== -1);
-            if (com == player) {
+            if (com.equals(player)) {
                 puntosp++;
                 puntosc++;
                 System.out.print("Empate");
-            } else if (com == "T" && player == "L" || 
-            com == "L" && player == "P" || 
-            com == "P" && player == "T") {
-                System.out.print("Tu pierdes.");
-            } else if (player == "" && com == "" ||
-            player == "" && com == "" ||
-            player == "" && com == "") {
+            } else if (com.equals("T") && player.equals("L") ||
+            com.equals("L") && player.equals("P") ||
+            com.equals("P") && player.equals("T")) {
+                System.out.println("Tu pierdes.");
+            } else if (player.equals("T") && com.equals("L") ||
+            player.equals("L") && com.equals("P") ||
+            player.equals("P") && com.equals("T")) {
                 puntosc++;
-
+                System.out.println("Ganaste. ");
             }
-        } while (player == "S");
+            System.out.println("Puntos jugador: " + puntosp + "\nPuntos jugador: " + puntosc);
+            System.out.println("Pulse intro ");
+        } while (player.equals("S"));
+
+        if (puntosp)
+
         scan.close();
 
     }
