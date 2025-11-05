@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -59,16 +58,17 @@ public class Main {
 
         } while (!player.equalsIgnoreCase("S"));
 
-        if (puntosc < puntosp) {
-            System.out.print("Ganaste.");
-        } else if (puntosc > puntosp) {
-            System.out.print("Perdiste.");
-        } else {
-            System.out.println("Empataste con el ordendor.");
-        }
         if (partidas != 0) {
-            System.out.println(" A la de " + partidas + " partidas.");
-        }
+            if (puntosc < puntosp) {
+                System.out.print("Ganaste.");
+            } else if (puntosc > puntosp) {
+                System.out.print("Perdiste.");
+            } else {
+                System.out.println("Empataste con el ordendor.");
+            }        
+                System.out.println(" A la de " + partidas + " partidas.");
+            }
         scan.close();
+
     }
 }
