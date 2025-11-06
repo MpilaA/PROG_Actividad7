@@ -11,37 +11,51 @@ public class Main {
         "Y si necesta salir pon una S. \n" +
         "Buena suerte.");
 
-
+        // Definicion de variable necesarias para funcionar.
         String player;
         int puntosp = 0, puntosc = 0, partidas = 0;
 
-        do { //Bucle para que empiece de nuevo hasta indicarse salir
+        do { //Bucle para que empiece de nuevo hasta indicarse salir.
             String [] jugadas = new String[] {"P", "L", "T", "S"};
+
             // Seleccion de la jugada del ordenador
             String com = jugadas[(int)(Math.random()*(jugadas.length-2))];
 
-            boolean a = false;
-            do {
+            boolean fin_jugadas = false;
+            do { // Bucle solo se sale al elegir la jugada.
                 scan = new Scanner(System.in);
                 System.out.print("Damela accion que has elegido: ");
                 player = scan.next().toUpperCase();
+                /* For para revisar si lo introducido esta dentro del 
+                 * array de las jugadas con todas las opciones
+                */
                 for (String i : jugadas){
                     if (player.equals(i)){
-                        a = true;
+                        fin_jugadas = true;
+                        break;
                     }
                 }
-            } while (a != true);
+                if (fin_jugadas == false) {
+                    System.out.println("Por favor pon una de las " + 
+                    "opciones admitidas");
+                }
+            } while (fin_jugadas != true);
+
+            System.out.println("El ordendor a elegido: " + com);
+
             // If para los empates
             if (com.equals(player)) {
                 puntosp++;
                 puntosc++;
                 System.out.println("Empate");
+
             // Else if para cuando pierdes.
             } else if (com.equals("T") && player.equals("L") ||
             com.equals("L") && player.equals("P") ||
             com.equals("P") && player.equals("T")) {
                 puntosc++;
                 System.out.println("Tu pierdes.");
+
             // Else if para cuando ganas.
             } else if (player.equals("T") && com.equals("L") ||
             player.equals("L") && com.equals("P") ||
@@ -49,15 +63,15 @@ public class Main {
                 puntosp++;
                 System.out.println("Ganaste. ");
             }
-            // Este if esta para cuando que no se ejecute esto cuando se introduce la S.
+            /* Este if esta para cuando que no se ejecute esto cuando 
+            se introduce la S. */
             if (!player.equalsIgnoreCase("S")) {
-                System.out.println("Puntos jugador: " + puntosp + "\nPuntos ordenador: " + puntosc);
-                System.out.println("Pulse intro para continuar: ");
+                System.out.println("Puntos jugador: " + puntosp + 
+                "\nPuntos ordenador: " + puntosc);
                 partidas++;
             }
-
         } while (!player.equalsIgnoreCase("S"));
-
+        // If que indica si le ganaste al ordenador
         if (partidas != 0) {
             if (puntosc < puntosp) {
                 System.out.print("Ganaste.");
@@ -65,9 +79,10 @@ public class Main {
                 System.out.print("Perdiste.");
             } else {
                 System.out.println("Empataste con el ordendor.");
-            }        
-                System.out.println(" A la de " + partidas + " partidas.");
             }
+            // Y esto imprime las partidas que hiciste
+            System.out.println(" A la de " + partidas + " partidas.");
+        }
         scan.close();
 
     }
